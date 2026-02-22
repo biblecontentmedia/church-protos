@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.biblecontentmedia.bible.version.v1;
+
+option java_multiple_files = true;
+option java_package = "com.biblecontentmedia.bible.version.v1";
+option java_outer_classname = "VersionProto";
+
+enum BibleVersion {
+  BIBLE_VERSION_UNSPECIFIED = 0;
+  BIBLE_VERSION_ESV = 1;
+  BIBLE_VERSION_KJV = 2;
+  BIBLE_VERSION_NIV = 3;
+  BIBLE_VERSION_NASB = 4;
+  BIBLE_VERSION_NLT = 5;
+  BIBLE_VERSION_AMP = 6;
+  BIBLE_VERSION_NKJV = 7;
+  BIBLE_VERSION_ASV = 8;
+  BIBLE_VERSION_MSG = 9;
+}

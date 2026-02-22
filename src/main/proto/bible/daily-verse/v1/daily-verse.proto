@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.biblecontentmedia.bible.dailyverse.v1;
+
+import "bible/version/v1/version.proto";
+
+option java_multiple_files = true;
+option java_package = "com.biblecontentmedia.bible.dailyverse.v1";
+option java_outer_classname = "DailyVerseProto";
+
+service DailyVerseService {
+  rpc GetDailyVerse (GetDailyVerseRequest) returns (DailyVerseResponse);
+}
+
+message VerseSummary {
+  string id = 1;
+  string text = 2;
+  string reference = 3;
+  com.biblecontentmedia.bible.version.v1.BibleVersion version = 4;
+}
+
+message GetDailyVerseRequest {
+  string language = 1;
+  com.biblecontentmedia.bible.version.v1.BibleVersion version = 2;
+}
+
+message DailyVerseResponse {
+  VerseSummary verse = 1;
+}
